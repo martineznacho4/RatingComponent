@@ -37,8 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel Deployment](https://rating-component-ruddy.vercel.app/)
 
 ## My process
 
@@ -88,7 +87,7 @@ const handleVisibility = () => {
 ### Continued development
 
 
-I'm not particularly comfortable with the way I handled the rating logic. Adding all of the buttons to an array and then incresing the index value + 1 to change the className works, but there's gotta be a more elegant solution.
+I'm not particularly comfortable with the way I handled the rating logic. Adding all of the buttons to an array and then increasing the index value + 1 to change the className works, but there's gotta be a more elegant solution.
 
 ```js
 
