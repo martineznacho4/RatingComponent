@@ -28,11 +28,8 @@ const Button = ({index}) => {
 
 const Rating = ({currentRating, setCurrentRating}) => {
   
-  
-  
   const handleRating = (value) => {
     setCurrentRating(value)
-    
   }
   
   const buttons = []

@@ -23,6 +23,11 @@ img{
   width: 30%;
 }
 
+.circleContainer:hover{
+  background-color: var(--light-grey);
+  cursor:pointer ;
+}
+
 .circleContainer{
   background-color: var(--dark-blue);
   border-radius: 100%;
@@ -62,6 +67,8 @@ ul{
   color: var(--medium-grey);
 }
 
+
+
 .cardStyle{
   margin: 1.8em;
   padding: 1.2em 1.8em;
@@ -85,7 +92,7 @@ p{
 }
 
 button:hover{
-  cursor:grab;
+  cursor:pointer;
   background-color: var(--white);
   color: var(--orange);
 }
@@ -114,4 +121,12 @@ button:hover{
 .thankCard img{
   width: 50%;
   margin-bottom: 25px;
+}
+
+@media (min-width: 425px){
+  .cardStyle{
+    margin: 0 auto;
+    width: 375px;
+    margin-top: 20vh;
+  }
 }
