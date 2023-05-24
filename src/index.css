@@ -76,6 +76,8 @@ ul{
 
 h1{
   color: var(--white);
+  font-size: 1.5em;
+  margin: 15px 0px;
 }
 
 p{
@@ -86,4 +88,30 @@ button:hover{
   cursor:grab;
   background-color: var(--white);
   color: var(--orange);
+}
+
+.thankCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ratingSelected{
+  background-color: var(--dark-blue);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 50px;
+  
+  
+}
+
+.ratingSelected p{
+  color: var(--orange);
+  margin: 5px 15px;
+}
+
+.thankCard img{
+  width: 50%;
+  margin-bottom: 25px;
 }

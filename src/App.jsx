@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import logo from './assets/icon-star.svg'
+import postImage from './assets/illustration-thank-you.svg'
 
 
 const Logo = () => {
@@ -25,9 +26,9 @@ const Button = ({index}) => {
 }
 
 
-const Rating = () => {
+const Rating = ({currentRating, setCurrentRating}) => {
   
-  const [currentRating, setCurrentRating] = useState(0)
+  
   
   const handleRating = (value) => {
     setCurrentRating(value)
@@ -53,20 +54,48 @@ const Rating = () => {
 }
 
 
+const ThankYou = ({rating}) => {
+
+  return(
+    <div className='thankCard'>
+      <img src={postImage}/>
+      <div className='ratingSelected' >
+        <p>
+          You selected {rating} out of 5
+        </p>
+      </div>
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+    </div>
+  )
+}
+
 function App() {
+  const [currentRating, setCurrentRating] = useState(0)
+  const [visible, setVisible] = useState(true)
   
+  const handleVisibility = () => {
+    setVisible(prev => !prev)
+  }
 
   return (
     <div className='cardStyle'>
 
-      <Logo />
-      <div>
-        <h1>How did we do?</h1>
-        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering</p>
-      </div>
-
-      <Rating />
-      <button>SUBMIT</button>
+      {visible && 
+        <>
+          <Logo />
+            <div>
+              <h1>How did we do?</h1>
+              <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering</p>
+            </div>
+          <Rating currentRating={currentRating} setCurrentRating={setCurrentRating}/>
+          <button onClick={handleVisibility}>SUBMIT</button>
+        </>
+      }
+      {!visible &&
+        <ThankYou rating={currentRating}/>
+      }
+      
     </div>
   )
 }
